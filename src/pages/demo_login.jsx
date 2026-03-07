@@ -1,25 +1,23 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import TopUtilityBar from "../components/top_utility/top_utility";
-import Navbar from "../components/navbar/Navbar";
-import Slider from "../components/SliderView";
 import NewArrivals from "./arrival/NewArrivals";
 import BestSellers from "./bestSellers/BestSeller";
 import PhilosphyIntro from "../components/philosphy_intro/PhilosphyIntro";
+import OurHandicrafts from "../components/handicrafts/OurHandicratfts";
+import TalesEmpowerment from "./empowerment/TalesEmpower";
+import SubscribeSection from "./updates/updates";
+import Slider from "../components/SliderView";
 
 function DemoLogin() {
- return (
-  <>
-    <TopUtilityBar />
-    <Navbar/>
-    <Slider/>
-    <NewArrivals/>
-    <BestSellers/>
-    <PhilosphyIntro/>
-  </>
-);
+  return (
+    <>
+      <Slider />
+      <NewArrivals />
+      <BestSellers />
+      <PhilosphyIntro />
+      <OurHandicrafts />
+      <TalesEmpowerment />
+      <SubscribeSection />
+    </>
+  );
 }
 
 export default DemoLogin;
-
-
