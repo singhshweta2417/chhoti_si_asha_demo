@@ -79,7 +79,7 @@ function GamesList() {
         } else {
           setError("Failed to load games.");
         }
-      } catch (err) {
+      } catch {
         setError("Could not connect to server.");
       } finally {
         setLoading(false);

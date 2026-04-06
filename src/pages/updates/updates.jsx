@@ -54,7 +54,7 @@ function SubscribeSection() {
           <div className="relative w-full rounded-xl overflow-hidden shadow-lg" style={{ paddingTop: "56.25%" }}>
             <iframe
               className="absolute top-0 left-0 w-full h-full"
-              src="https://youtu.be/DCPajZ43Wxc"
+              src="https://www.youtube.com/embed/DCPajZ43Wxc"
               title="Disha 2.0 Promo"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

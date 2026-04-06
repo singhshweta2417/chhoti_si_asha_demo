@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { ChevronLeft, ChevronRight, Heart, Eye, X, ShoppingBag } from "lucide-react";
 
 const products = [
@@ -211,7 +211,6 @@ function BestSellers() {
 
     setTimeout(() => {
       setOffset((prev) => {
-        const max = loopedProducts.length - ITEMS_PER_VIEW;
         if (prev >= products.length * 2) return START_OFFSET;
         if (prev < 0) return products.length - 1;
         return prev;
@@ -233,8 +232,6 @@ function BestSellers() {
   const decreaseQuantity = (id) => setCartItems((prev) => prev.map((item) => item.id === id ? { ...item, quantity: item.quantity - 1 } : item).filter((item) => item.quantity > 0));
   const toggleWishlist = (id) => setWishlist((prev) => prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]);
   const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
-
-  const normalizedOffset = ((offset - START_OFFSET) % products.length + products.length) % products.length;
 
   return (
     <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-14">

@@ -65,7 +65,6 @@ function Slider() {
   // Progress bar
   useEffect(() => {
     if (slides.length === 0) return;
-    setProgress(0);
     const start = Date.now();
     const frame = () => {
       const elapsed = Date.now() - start;
